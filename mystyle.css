@@ -1,0 +1,208 @@
+body {
+  background-color: #fffaf0;
+  margin: 0px;
+}
+
+.topnav {
+  position: sticky;
+  top: 0;
+  background-color: #059F00;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #fffaf0;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #035400;
+  box-shadow: 0px 0px 10px #011A00;
+}
+
+.topnav a.active {
+  background-color: #035400;
+  box-shadow: 0px 0px 10px #011A00;
+  color: white;
+}
+
+#face {
+  padding: 0px 0px;
+  float: right;
+}
+
+#fc {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1 {
+  color: #7C00AE;
+  text-align: center;
+  font-size: 40px;
+}
+
+#rg {
+  padding-top: 60px;
+}
+
+{
+  color: #047A00;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px #047A00;
+}
+.abzats {
+  color: black;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.abzatsk {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+.centerbr {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+img {
+
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#pck {
+  padding: 30px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#vd {
+  margin-left: 200px;
+}
+
+.container {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 20fr 31fr;
+ column-gap: px;
+}
+
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+.text {
+  font-size: 20px;
+  margin-right: 200px;
+}
+
+.pic {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+br {
+  font-size: 20px;
+}
+
+.cont {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-left: 40px;
+}
+
+.cont .content {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  opacity: 0.75;
+  color: #f1f1f1;
+  width: 260px;
+  padding: 20px;
+}
+
+.kniga {
+  margin-left: 0px;
+  margin-right: 0px; 
+}
+
+{
+  box-sizing: border-box;
+}
+
+.column {
+  display: block;
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+
+.column2 {
+  display: block;
+  float: right;
+  width: 50%;
+  padding: 0px;
+}
+
+.row {
+  margin-top: 100px;
+  margin-left: 420px;
+  content: "";
+  clear: both;
+  display: table;
+  width: 700px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #7C00AE;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  font-size: 20px;
+  width: 200px;
+  background-color: #059F00;
+  color: white;
+  padding: 10px 20px;
+  margin: 15px 90px 0px 90px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #7C00AE;
+}
+
+.login {
+  font-size: 20px;
+  width: 25%;
+  border: 3px solid #059F00;
+  border-radius: 30px;
+  background-color: #f2f2f2;  
+  padding: 30px;
+  margin: 0 555px;
+}
+
+.butto {
+  margin-top: 20px;
+}
