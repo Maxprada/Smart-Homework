@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Масив чисел</title>
+</head>
+<body>
+
+<script>
+    // Запитуємо користувача ввести числа через кому
+    var inputNumbers = prompt("Введіть числа через кому (наприклад, 5,12,3,8):");
+
+    // Розбиваємо введену рядок на масив чисел
+    var numbers = inputNumbers.split(',').map(function (num) {
+        return parseInt(num, 10);
+    });
+
+    // Знаходимо максимальне число
+    var maxNumber = Math.max(...numbers);
+
+    // Знаходимо мінімальне число
+    var minNumber = Math.min(...numbers);
+
+    // Знаходимо суму всіх чисел
+    var sum = numbers.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue;
+    }, 0);
+
+    // Фільтруємо парні та непарні числа
+    var evenNumbers = numbers.filter(function (number) {
+        return number % 2 === 0;
+    });
+
+    var oddNumbers = numbers.filter(function (number) {
+        return number % 2 !== 0;
+    });
+
+    // Знаходимо середнє значення
+    var average = sum / numbers.length;
+
+    // Виводимо результати у консоль
+    console.log("Максимальне число:", maxNumber);
+    console.log("Мінімальне число:", minNumber);
+    console.log("Сума всіх чисел:", sum);
+    console.log("Парні числа:", evenNumbers);
+    console.log("Непарні числа:", oddNumbers);
+    console.log("Середнє значення:", average);
+</script>
+
+</body>
+</html>
