@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин</title>
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #cart {
+            border: 1px solid #333;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <h1>Інтернет-магазин</h1>
+
+    <div class="product" data-name="Товар 1" data-price="50">
+        <h2>Товар 1</h2>
+        <p>Ціна: $50</p>
+        <button class="add-to-cart">Додати до кошика</button>
+    </div>
+
+    <div class="product" data-name="Товар 2" data-price="30">
+        <h2>Товар 2</h2>
+        <p>Ціна: $30</p>
+        <button class="add-to-cart">Додати до кошика</button>
+    </div>
+
+    <div id="cart">
+        <h2>Кошик</h2>
+        <p>Кількість товарів: <span id="cart-count">0</span></p>
+        <p>Загальна сума: $<span id="cart-total">0</span></p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.add-to-cart').click(function() {
+                var product = $(this).closest('.product');
+                var name = product.data('name');
+                var price = parseFloat(product.data('price'));
+
+                var cartCount = parseInt($('#cart-count').text());
+                var cartTotal = parseFloat($('#cart-total').text());
+
+                $('#cart-count').text(cartCount + 1);
+                $('#cart-total').text((cartTotal + price).toFixed(2));
+            });
+        });
+    </script>
+
+</body>
+</html>
