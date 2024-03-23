@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоомагазин</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="project.html"><b>Головна</b></a>
+        <a href="prkatal.html"><b>Каталог</b></a>
+        <a href=""><b>Про нас</b></a>
+        <a id="face" href="praccount.html"><b><img class="ic" src="face.png" width="40" height="40"></b></a>
+        <a id="krz" href="prcart.html"><b><img class="ic" src="korz.png" width="40" height="40"></b></a>
+        <a id="hrt" href="prfavourite.html"><b><img class="ic" src="heart.png" width="40" height="40"></b></a>
+      </div>
+
+      <h1>Зоомагазин</h1>
+
+      <h2>Товари дня</h2>
+
+      <div class="items">
+        <div class="card card1">
+            <img class="ic hrtb" onclick="changeImage(this)" alt="Heart1" src="heartb.png" width="40" height="40">
+            <img class="ic krzb" onclick="changeImage2(this)" alt="Krz1" src="korzb.png" width="40" height="40" data-id="3" data-name="Клуб 4 лапи Premium з куркою для дорослих кішок" data-price="19.99">
+            <img src="1.jpg" style="width:160px">
+            <h4>Клуб 4 лапи Premium з куркою для дорослих кішок</h4>
+            <b class="price">19.99 грн</b>
+            <button>Детальніше</button>
+        </div>
+        <div class="card">
+            <img class="ic hrtb" onclick="changeImage(this)" alt="Heart2" src="heartb.png" width="40" height="40">
+            <img class="ic krzb" onclick="changeImage2(this)" alt="Krz2" src="korzb.png" width="40" height="40" data-id="2" data-name="Лежак для собак і кішок Ferplast Dandy Бузковий з чорним" data-price="663">
+            <img src="2.webp" style="width:160px; margin: 77px 0px 77px 0px;">
+            <h4>Лежак для собак і кішок Ferplast Dandy Бузковий з чорним</h4>
+            <b class="price">663 грн</b>
+            <button>Детальніше</button>
+        </div>
+        <div class="card">
+            <img class="ic hrtb" onclick="changeImage(this)" alt="Heart3" src="heartb.png" width="40" height="40">
+            <img class="ic krzb" onclick="changeImage2(this)" alt="Krz3" src="korzb.png" width="40" height="40" data-id="3" data-name="Клуб 4 лапи Premium з куркою для дорослих кішок" data-price="19.99">
+            <img src="1.jpg" style="width:160px">
+            <h4>Клуб 4 лапи Premium з куркою для дорослих кішок</h4>
+            <b class="price">19.99 грн</b>
+            <button>Детальніше</button>
+        </div>
+        <div class="card">
+            <img class="ic hrtb" onclick="changeImage(this)" alt="Heart4" src="heartb.png" width="40" height="40">
+            <img class="ic krzb" onclick="changeImage2(this)" alt="Krz4" src="korzb.png" width="40" height="40" data-id="3" data-name="Клуб 4 лапи Premium з куркою для дорослих кішок" data-price="19.99">
+            <img src="1.jpg" style="width:160px">
+            <h4>Клуб 4 лапи Premium з куркою для дорослих кішок</h4>
+            <b class="price">19.99 грн</b>
+            <button>Детальніше</button>
+        </div>
+        <div class="card">
+            <img class="ic hrtb" onclick="changeImage(this)" alt="Heart5" src="heartb.png" width="40" height="40">
+            <img class="ic krzb" onclick="changeImage2(this)" alt="Krz5" src="korzb.png" width="40" height="40" data-id="3" data-name="Клуб 4 лапи Premium з куркою для дорослих кішок" data-price="19.99">
+            <img src="1.jpg" style="width:160px">
+            <h4>Клуб 4 лапи Premium з куркою для дорослих кішок</h4>
+            <b class="price">19.99 грн</b>
+            <button>Детальніше</button>
+        </div>
+        <div class="card">
+            <img class="ic hrtb" onclick="changeImage(this)" alt="Heart6" src="heartb.png" width="40" height="40">
+            <img class="ic krzb" onclick="changeImage2(this)" alt="Krz6" src="korzb.png" width="40" height="40" data-id="3" data-name="Клуб 4 лапи Premium з куркою для дорослих кішок" data-price="19.99">
+            <img src="1.jpg" style="width:160px">
+            <h4>Клуб 4 лапи Premium з куркою для дорослих кішок</h4>
+            <b class="price">19.99 грн</b>
+            <button>Детальніше</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.krzb').click(function() {
+                var id = $(this).data('id');
+                var name = $(this).data('name');
+                var price = parseFloat($(this).data('price'));
+                addToCart(id, name, price);
+            });
+        });
+
+        function addToCart(id, name, price) {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var existingItem = cart.find(function(item) {
+                return item.id === id;
+            });
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+    <script src="project.js"></script>
+</body>
+</html>

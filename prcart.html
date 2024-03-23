@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="project.html"><b>Головна</b></a>
+        <a href=""><b>Каталог</b></a>
+        <a href=""><b>Про нас</b></a>
+        <a id="face" href="praccount.html"><b><img class="ic" src="face.png" width="40" height="40"></b></a>
+        <a class="active" id="krz" href="prcart.html"><b><img class="ic" src="korz.png" width="40" height="40"></b></a>
+        <a id="hrt" href="prfavourite.html"><b><img class="ic" src="heart.png" width="40" height="40"></b></a>
+      </div>
+
+    
+    <h1>Кошик</h1>
+    <div id="cart">
+        <div id="cart-items"></div>
+        <div id="total">Загальна сума: $<span id="total-amount">0</span></div>
+        <button id="clear-cart">Очистити кошик</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            renderCart();
+            
+            $('#clear-cart').click(function() {
+                clearCart();
+                renderCart();
+            });
+        });
+
+        function renderCart() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var total = 0;
+            $('#cart-items').empty();
+            cart.forEach(function(item) {
+                var itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                $('#cart-items').append('<div>' + item.name + ' - ' + item.quantity + ' шт. - $' + itemTotal + '</div>');
+            });
+            $('#total-amount').text(total.toFixed(2));
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+        }
+    </script>
+</body>
+</html>

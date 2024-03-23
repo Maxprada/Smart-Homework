@@ -1,0 +1,272 @@
+b {
+  background-image: url('фон.png');
+}
+
+.topnav {
+    position: sticky;
+    top: 0;
+    background-color: #059F00;
+    overflow: hidden;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #fffaf0;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(60, 0, 255);
+    box-shadow: 0px 0px 10px rgb(0, 255, 242);
+  }
+  
+  .topnav a.active {
+    background-color: #035400;
+    box-shadow: 0px 0px 10px #011A00;
+    color: white;
+  }
+
+  #face {
+    padding: 0px 0px;
+    float: right;
+  }
+
+  #krz {
+    padding: 0px 0px;
+    float: right;
+  }
+
+  #hrt {
+    padding: 0px 0px;
+    float: right;
+  }
+  
+  .ic {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+
+  .krzb {
+    margin-left: 35px;
+    margin-right: 5px;
+  }
+
+  .hrtb {
+    margin-left: 5px;
+    margin-right: 35px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    color: darkgreen;
+  }
+
+  #pets {
+    float: top;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    width: 450px;
+    height: 530px;
+    border-radius: 5%;
+  }
+  
+  input, option, select {
+    margin: 0;
+    border-radius: 15px;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border-color: #059F00;
+  }
+
+  label{
+    color: black;
+    font-size: 18px;
+  }
+
+  .regh{
+    color: darkgreen;
+    text-shadow: 2px 2px 3px lightgreen;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+
+  button {
+    margin-top: 5px;
+    padding: 10px;
+    width: 250px;
+    background: darkgreen;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 15px;
+  }
+
+  button:hover {
+    background-color: rgb(60, 0, 255);
+    box-shadow: 2px 2px 5px rgb(0, 255, 242);
+  }
+
+  .butto{
+    margin-left: 100px;
+    margin-top: 70px;
+  }
+
+  #login {
+    height: 370px;
+  }
+
+  select {
+    width: 321.6px;
+  }
+
+  #pet {
+    color: darkgreen;
+    text-shadow: 2px 2px 3px lightgreen;
+  }
+
+  .icons {
+    margin-left: 7px;
+    margin-top: 17px;
+    float: left;
+  }
+  
+  #google {
+    margin-left: 8px;
+  }
+
+  .logina {
+    width: 140px;
+    margin-top: 15px;
+    margin-left: 110px;
+  }
+
+  .logo {
+    height: 160px;
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  #log {
+    margin-top: 5px;
+    padding: 10px;
+    width: 250px;
+    background: darkgreen;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 15px;
+  }
+
+  #log:hover {
+    background-color: rgb(60, 0, 255);
+    box-shadow: 2px 2px 5px rgb(0, 255, 242);
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    font-family: arial;
+    border-radius: 10px;
+    display: block;
+    float: left; 
+    margin-left: 30px;
+    padding-top: 10px;
+  }
+
+  .card1 {
+    margin-left: 0px;
+  }
+  
+  .price {
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: darkgreen;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card button:hover {
+    background-color: rgb(60, 0, 255);
+  }
+
+  h4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 15px;
+  }
+
+  .items {
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    height: 478px;
+  }
+
+  h2 {
+    margin-left: 80px;
+    color: rgb(60, 0, 255);
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .BlockinMyAccount {
+    margin-left: 75px;
+    margin-right: 75px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 1px 6px darkgreen;
+  }
+
+  .account {
+    margin: 0px 0px 0px 0px;
+    color: darkgreen;
+  }
